@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+}
+
+.navbar::before {
+    content: "";
+    /* background-color: black; */
+    background-image: url(nature-3082832_1280.jpg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+.preloder {
+    display: none;
+    background: #080808 url(preloader.gif) no-repeat center center;
+    background-size: 100%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(nature-3082832_1280.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Naavbar Section */
+
+.container {
+    padding: 10px 10%;
+}
+
+
+.Download {
+    width: 190px;
+    height: 50px;
+    border: none;
+    margin-top: 5px;
+    font-size: 15px;
+    background: linear-gradient(to right, #ff004f, #753a88);
+    color: white;
+    padding: 3px;
+    border-radius: 8px;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.Download:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #ff004f, #753a88 51%, #ff004f);
+    transition: 0.5s;
+    background-position: right center;
+    transform: translateY(5px);
+
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-top: 15px;
+}
+
+.item {
+    padding-left: 45px;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+.item a:hover {
+    transition: all 01s;
+    text-decoration: underline #ff004f;
+}
+
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    color: white;
+}
+
+.name {
+    color: #ff004f;
+}
+
+/* About Section  */
+
+#about {
+    padding: 80px 0px;
+    color: #ababab;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-col-1 img {
+    width: 100%;
+    height: 90%;
+    border-radius: 55px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+    margin-left: 20px;
+}
+
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.skils {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.skils-item {
+    list-style: none;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+.skils-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.skils-1 {
+    text-decoration: underline #ff004f;
+}
+
+.skils-paras {
+    list-style: none;
+    margin: 25px 0px;
+}
+
+.front {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.skils-para2 {
+    margin-top: 10px;
+}
+
+
+/* Services section */
+
+#services {
+    padding-bottom: 10%;
+}
+
+.serv-title {
+    margin-top: 5%;
+}
+
+.line {
+    border: 2px solid rgb(58, 51, 51);
+    width: 100%;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color: white;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.service-heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-contact {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.service1 {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.service1:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* Potfolio-Section */
+
+#portfolio {
+    padding-bottom: 10%;
+}
+
+.portfolio-container {
+    padding: 10px 9%;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    position: relative;
+    z-index: -1;
+}
+
+.work-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.4;
+    transition: height 0.5s;
+    color: white;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.layer span {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.cont-col1 {
+    margin-top: 10%;
+    color: white;
+}
+
+.cont-col1 span {
+    margin-top: 10%;
+}
+
+.cont-title {
+    padding-bottom: 10%;
+}
+
+.cont-col2 {
+    width: 60%;
+    margin-top: 10%;
+}
+
+.form-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name1 {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.message {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.submit {
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    color: white;
+    background-color: rgb(41, 41, 41);
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.footer-name {
+    color: #ff004f;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 750px) {
+    #header {
+        background-image: url(mobile\ background.jpg);
+    }
+
+    .container {
+        padding: 10px 0%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        padding-left: 15px;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .serv-title {
+        margin: 0px 23px;
+    }
+
+    .service1 {
+        margin: 0px 20px;
+    }
+
+    .header-text {
+        margin: 0px 18%;
+        margin-top: 20%;
+    }
+
+    .cont-col2 {
+        width: 80%;
+    }
+
+    .navbar::before {
+        background-image: url(mobile\ background.jpg);
+    }
+}
